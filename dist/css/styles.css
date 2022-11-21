@@ -5,5 +5,13 @@
 body {
   width: 70%;
   margin: auto;
-  background-color: #F2F3F9;
+  background-color: #f2f3f9;
+}
+
+section {
+  background-color: rgba(168, 188, 255, 0.2);
+}
+
+.footer {
+  background-color: rgba(168, 188, 255, 0.2);
 }
