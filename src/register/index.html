@@ -72,33 +72,46 @@
           >
             <div id="register-column" class="col-md-6">
               <div id="register-box" class="col-md-12">
+                <!--Registration form-->
                 <form class="register-form">
                   <h3 class="text-center mt-3">Register</h3>
                   <div class="form-group">
+                    <!--Name Input-->
                     <label for="email">Name</label><br />
                     <input
                       type="text"
                       name="name"
                       id="name"
                       class="form-control"
+                      required
+                      pattern="^[\w]+$"
+                      title="Name can't contain symbols apart from lowercase, uppercase and underscore(_)."
                     />
                   </div>
                   <div class="form-group">
+                    <!--Email Input-->
                     <label for="email">Email</label><br />
                     <input
                       type="text"
                       name="email"
                       id="email"
                       class="form-control"
+                      required
+                      pattern="^[\w\-.]+@(stud.)?noroff.no$"
+                      title="Email must include noroff.no or stud.noroff.no"
                     />
                   </div>
                   <div class="form-group">
+                    <!--Password Input-->
                     <label for="password">Password</label><br />
                     <input
                       type="text"
                       name="password"
                       id="password"
                       class="form-control"
+                      required
+                      minlength="8"
+                      title="Your password must have at least 8 characters"
                     />
                   </div>
                   <div class="d-flex justify-content-center">
@@ -134,12 +147,13 @@
           </div>
         </div>
       </div>
-      <p>copyright &copy;2021 <a href="#">GameHub</a></p>
+      <p>copyright &copy;2021 <a href="#">The Next</a></p>
     </footer>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
       crossorigin="anonymous"
     ></script>
+    <script type="module" src="/js/api/auth/register.mjs"></script>
   </body>
 </html>
