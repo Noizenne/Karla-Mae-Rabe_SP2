@@ -11,15 +11,15 @@ export function setLoginFormListener() {
 
       const profile = localStorage.getItem(email);
 
-      const data = JSON.parse(data);
+      const data = JSON.parse(profile);
       console.log(data);
       
-      if(profile == null) {
-        console.log("wrong email");
+      if(profile == null | profile != data.email ) {
+        console.log("Wrong email");
       } else if(email == data.email && password == data.password){
         console.log("You are logged in")
       } else {
-        console.log("wrong password")
+        console.log("Wrong password")
       }
 
       login(profile);

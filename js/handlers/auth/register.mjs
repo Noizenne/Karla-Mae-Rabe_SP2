@@ -1,5 +1,5 @@
-import * as register from "../auth/register.mjs"
-import { save } from "../../storage/index.mjs"
+import { register } from "../../api/auth/register.mjs"
+/* import { load } from "../../storage/index.mjs" */
 
 export function setRegisterFormListener() {
   const form = document.querySelector(".register-form");
@@ -19,7 +19,7 @@ export function setRegisterFormListener() {
       };
 
       const json = JSON.stringify(profile);
-      save(username, json);
+      localStorage.setItem(username, json);
       console.log("Registered");
 
       register(profile);
