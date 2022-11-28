@@ -1,5 +1,10 @@
 import * as handlers from "./handlers/index.mjs"
 
+const path = location.pathname;
 
-handlers.setLoginFormListener();
-handlers.setRegisterFormListener();
+
+if (path === "/src/login/index.html") {
+    handlers.setLoginFormListener();
+} else if(path === "/src/register/index.html"){
+    handlers.setRegisterFormListener();
+}
