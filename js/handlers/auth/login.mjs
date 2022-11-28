@@ -3,7 +3,7 @@ import { login } from "../../api/auth/login.mjs";
 export function setLoginFormListener() {
   const form = document.querySelector(".login-form");
 
-  form.addEventListener("submit", (event) => {
+  form.addEventListener("submit", async (event) => {
     event.preventDefault();
 
     const form = event.target;

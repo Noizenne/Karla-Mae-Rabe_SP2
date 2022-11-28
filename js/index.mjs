@@ -7,4 +7,6 @@ if (path === "/src/login/index.html") {
     handlers.setLoginFormListener();
 } else if(path === "/src/register/index.html"){
     handlers.setRegisterFormListener();
-}
+}/*  else if(path === "/index.html") {
+
+} */
