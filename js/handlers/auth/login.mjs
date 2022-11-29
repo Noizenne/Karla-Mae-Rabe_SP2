@@ -10,7 +10,7 @@ export function setLoginFormListener() {
     const formData = new FormData(form);
     const profile = Object.fromEntries(formData.entries());
     console.log("Logged In");
-
+    window.location.href = "/src/profile/index.html"
     console.log(profile);
     login(profile);
   });
