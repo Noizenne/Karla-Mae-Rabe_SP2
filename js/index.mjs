@@ -5,11 +5,11 @@ import * as templates from "./templates/profile/index.mjs"
 const path = location.pathname;
 
 
-if (path === "/src/login/index.html") {
+if (path === "/NEXT-Auction-House/login/index.html") {
     handlers.setLoginFormListener();
-} else if(path === "/src/register/index.html"){
+} else if(path === "/NEXT-Auction-House/register/index.html"){
     handlers.setRegisterFormListener();
-}  else if(path === "/src/profile/index.html") {
+}  else if(path === "/NEXT-Auction-House/profile/index.html") {
     templates.profileTemplate();
 } 
 

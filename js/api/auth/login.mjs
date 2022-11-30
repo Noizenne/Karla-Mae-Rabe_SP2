@@ -21,7 +21,7 @@ export async function login(profile) {
         const profile = await response.json();
         storage.save("token", profile.accessToken);
         storage.save("profile", profile);
-        window.location.href = `/src/profile/?${profile.name}`
+        window.location.href = `/NEXT-Auction-House/profile/index.html?${profile.name}`
         return profile;
     }
 
