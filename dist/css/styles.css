@@ -10942,21 +10942,21 @@ textarea.form-control-lg {
 body {
   width: 70%;
   margin: auto;
-  background-color: #4d3227;
+  background-color: #2E343B;
 }
 
 .navbar-brand img {
-  width: 300px;
-  color: #fffacd;
+  width: 200px;
+  color: #FFD700;
 }
 
 #login-link {
-  color: #fffacd;
+  color: #FFD700;
 }
 
 #register-link {
-  background-color: #8bb82d;
-  color: #4d3227;
+  background-color: #EF4DCF;
+  color: #EAEFF5;
   border: none;
 }
 
@@ -10964,7 +10964,7 @@ section,
 .login,
 .register,
 footer {
-  background-color: #e7903c;
+  background-color: #03031C;
 }
 
 .login,
@@ -10981,7 +10981,7 @@ h3,
   font-family: lato, sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #050709;
+  color: #FFD700;
 }
 
 p,
@@ -10993,8 +10993,8 @@ p,
 }
 
 .btn {
-  background-color: #8bb82d;
-  color: #fffacd;
+  background-color: #EF4DCF;
+  color: #FFD700;
 }
 
 .profile {
@@ -11005,4 +11005,8 @@ p,
 .profileDetails {
   flex-basis: 300px;
   margin-left: 20px;
+}
+
+.profileListings {
+  margin-top: 20px;
 }

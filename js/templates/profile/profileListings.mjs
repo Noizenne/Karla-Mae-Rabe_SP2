@@ -1,4 +1,4 @@
-import { getListingsFromProfile } from "../../../api/listings/index.mjs"
+import { getListingsFromProfile } from "../../api/listings/index.mjs"
 
 export function templateProfileListings(profileData) {
   console.log(profileData);
@@ -6,7 +6,8 @@ export function templateProfileListings(profileData) {
   const section = document.createElement("div");
   section.classList.add("listings");
   section.innerHTML = 
-  `<div>${profileData.listings}</div>
+  `<h2>Listings</h2>
+  <div>${profileData.listings}</div>
   `;
 
   console.log(section);
