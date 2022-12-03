@@ -11,6 +11,7 @@ if (path === "/NEXT-Auction-House/login/index.html") {
     handlers.setRegisterFormListener();
 }  else if(path === "/NEXT-Auction-House/profile/index.html") {
     templates.profileTemplate();
-} 
+    templates.listingsTemplate();
+}  
 
 

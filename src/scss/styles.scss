@@ -62,3 +62,13 @@ p,
   background-color: $accent-color;
   color: $tertiary-color;
 }
+
+.profile {
+  display: flex;
+  justify-content: center;
+}
+
+.profileDetails {
+  flex-basis: 300px;
+  margin-left: 20px;
+}
