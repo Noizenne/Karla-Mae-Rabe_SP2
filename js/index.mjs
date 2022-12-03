@@ -6,11 +6,11 @@ const path = location.pathname;
 
 if (path === "index.html") {
   templates.allListingsTemplate();
-} else if (path === "/NEXT-Auction-House/login/index.html") {
+} else if (path === "/Treasures/login/index.html") {
   handlers.setLoginFormListener();
-} else if (path === "/NEXT-Auction-House/register/index.html") {
+} else if (path === "/Treasures/register/index.html") {
   handlers.setRegisterFormListener();
-} else if (path === "/NEXT-Auction-House/profile/index.html") {
+} else if (path === "/Treasures/profile/index.html") {
   templates.profileTemplate();
   templates.listingsTemplate();
 }
