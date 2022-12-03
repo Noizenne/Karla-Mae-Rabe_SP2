@@ -10,7 +10,7 @@ body {
 }
 
 .navbar-brand img {
-  width: 300px;
+  width: 200px;
   color: $tertiary-color;
 }
 #login-link {
@@ -19,7 +19,7 @@ body {
 
 #register-link {
   background-color: $accent-color;
-  color: $primary-color;
+  color: $text-color;
   border: none;
 }
 
@@ -45,7 +45,7 @@ h3 {
 
   font-style: normal;
 
-  color: $text-color;
+  color: $tertiary-color;
 }
 
 p,
@@ -71,4 +71,8 @@ p,
 .profileDetails {
   flex-basis: 300px;
   margin-left: 20px;
+}
+
+.profileListings {
+  margin-top: 20px;
 }
