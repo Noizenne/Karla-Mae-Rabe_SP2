@@ -7,20 +7,38 @@ body {
   width: 70%;
   margin: auto;
   background-color: $primary-color;
+  color: $text-color;
+}
+
+img {
+  width: 150px;
+  display: block;
+  margin: auto;
 }
 
 .navbar-brand img {
   width: 200px;
-  color: $tertiary-color;
 }
+
 #login-link {
   color: $tertiary-color;
 }
 
-#register-link {
-  background-color: $accent-color;
+#register-link,
+.btn {
   color: $text-color;
-  border: none;
+  border: solid 1px;
+}
+
+.login,
+.register {
+  width: 50%;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+  color: $text-color;
 }
 
 section,
@@ -30,10 +48,8 @@ footer {
   background-color: $secondary-color;
 }
 
-.login,
-.register {
-  width: 50%;
-  margin: auto;
+.brand img {
+  width: 300px;
 }
 
 h1,
@@ -58,9 +74,16 @@ p,
   font-style: normal;
 }
 
-.btn {
-  background-color: $accent-color;
-  color: $tertiary-color;
+.listing {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  color: $secondary-color;
+  font-size: 25px;
+}
+
+.small {
+  font-size: 15px;
 }
 
 .profile {
