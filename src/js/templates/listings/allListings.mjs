@@ -1,23 +1,30 @@
 import { getListings } from "../../api/listings/index.mjs"
 
 export function templateListings(listingsData) {
-  console.log(listingsData);
 
   const section = document.createElement("div");
-  section.classList.add("listings");
+  section.classList.add("listing");
+  section.classList.add("m-2");
   section.innerHTML = 
-  `<h2>Listings</h2>
-  <div>${listingsData.listings}</div>
+   `<a href="/Treasures/listings/listing/index.html?=${listingsData.id}">
+   <div class="d-flex justify-content-center">${listingsData.title}</div>
+    <div class="d-flex justify-content-center small">${listingsData.endsAt}</div></a>
   `;
+    
+  if(listingsData.media) {
 
-  console.log(section);
-  return section;
+    const img = document.createElement("img");
+    img.src = listingsData.media;
+    img.alt = `Image is from ${listingsData.title}`;
+    section.append(img);  
+
+  } 
+  return section;   
 }
 
-export function renderListings(allListingsData, parent) {
-  parent.append(...allListingsData(templateListings));
+export function renderListings(listingsData, parent) {
+  parent.append(...listingsData.map(templateListings));
 }
-
 export async function allListingsTemplate() {
   const listings = await getListings();
   const container = document.querySelector(".listings");

@@ -10778,35 +10778,50 @@ textarea.form-control-lg {
 body {
   width: 70%;
   margin: auto;
-  background-color: #2e343b;
+  background-color: #e9e0cf;
+  color: #463205;
+}
+
+img {
+  width: 150px;
+  display: block;
+  margin: auto;
 }
 
 .navbar-brand img {
   width: 200px;
-  color: #ffd700;
 }
 
 #login-link {
-  color: #ffd700;
+  color: #463205;
 }
 
-#register-link {
-  background-color: #ef4dcf;
-  color: #eaeff5;
-  border: none;
-}
-
-section,
-.login,
-.register,
-footer {
-  background-color: #03031c;
+#register-link,
+.btn {
+  color: #463205;
+  border: solid 1px;
 }
 
 .login,
 .register {
   width: 50%;
   margin: auto;
+}
+
+a {
+  text-decoration: none;
+  color: #463205;
+}
+
+section,
+.login,
+.register,
+footer {
+  background-color: #f8f3ea;
+}
+
+.brand img {
+  width: 300px;
 }
 
 h1, .h1,
@@ -10817,7 +10832,7 @@ h3,
   font-family: lato, sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #ffd700;
+  color: #463205;
 }
 
 p,
@@ -10828,9 +10843,15 @@ p,
   font-style: normal;
 }
 
-.btn {
-  background-color: #ef4dcf;
-  color: #ffd700;
+.listing {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  font-size: 25px;
+}
+
+.small {
+  font-size: 15px;
 }
 
 .profile {

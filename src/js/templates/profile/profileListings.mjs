@@ -24,5 +24,3 @@ export async function listingsTemplate() {
   const container = document.querySelector(".profileListings");
   renderProfileListings(profile, container);
 }
-
-//Komme tilbake til denne etter å ha lagd en bid, kanskje det kommer ut tomt array pga det
