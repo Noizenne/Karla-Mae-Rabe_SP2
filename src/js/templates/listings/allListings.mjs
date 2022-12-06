@@ -7,7 +7,7 @@ export function templateListings(listingsData) {
   section.classList.add("listing");
   section.classList.add("m-2");
   section.innerHTML = 
-   `<a href="/Treasures/listings/listing/index.html?=${listingsData.id}">
+   `<a href="/Treasures/listings/listing/index.html?id=${listingsData.id}">
    <div class="d-flex justify-content-center">${listingsData.title}</div>
     <div class="d-flex justify-content-center small">${listingsData.endsAt}</div></a>
   `;

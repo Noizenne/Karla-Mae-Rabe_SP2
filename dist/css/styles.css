@@ -10800,6 +10800,7 @@ img {
 .btn {
   color: #463205;
   border: solid 1px;
+  border-radius: 0;
 }
 
 .login,
@@ -10851,6 +10852,12 @@ p,
   font-size: 25px;
   border: solid 1px #463205;
   padding: 10px;
+}
+
+.single {
+  display: flex;
+  flex-direction: row;
+  padding: 30px;
 }
 
 .small {

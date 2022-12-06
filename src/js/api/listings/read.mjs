@@ -24,8 +24,7 @@ headers: {
 // Get single listing
 
 export async function getListing(id = window.location.search) { 
-  console.log(id)
-
+  
   const response = await fetch(`${AUCTION_URL}${action}/${id}`, {
     headers: {
             "Content-Type": "application/json"

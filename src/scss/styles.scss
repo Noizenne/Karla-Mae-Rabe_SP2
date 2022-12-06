@@ -28,6 +28,7 @@ img {
 .btn {
   color: $text-color;
   border: solid 1px;
+  border-radius: 0;
 }
 
 .login,
@@ -82,6 +83,12 @@ p,
   font-size: 25px;
   border: solid 1px $text-color;
   padding: 10px;
+}
+
+.single {
+  display: flex;
+  flex-direction: row;
+  padding: 30px;
 }
 
 .small {
