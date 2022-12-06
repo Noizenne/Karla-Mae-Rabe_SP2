@@ -10847,7 +10847,10 @@ p,
   display: flex;
   flex-direction: column;
   width: 250px;
+  height: 320px;
   font-size: 25px;
+  border: solid 1px #463205;
+  padding: 10px;
 }
 
 .small {

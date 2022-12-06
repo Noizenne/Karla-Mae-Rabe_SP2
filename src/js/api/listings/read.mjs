@@ -38,6 +38,8 @@ export async function getListing(id = window.location.search) {
   return await response.json();
   
 }
+
+
 //get listings from a specific user
 
 export async function getListingsFromProfile(name = load("profile").name) {
