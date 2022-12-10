@@ -1,5 +1,6 @@
 import { load } from "../../storage/index.mjs";
 import { AUCTION_URL } from "../constants.mjs";
+import { getToken } from "../auth/getToken.mjs";
 
 export async function getProfiles() {
   const response = await fetch(`${AUCTION_URL}/profiles`, {

@@ -1,7 +1,6 @@
 import { getProfile } from "../../api/profiles/index.mjs";
 
 export function templateProfilePageInfo(profileData) {
-  console.log(profileData);
 
   const section = document.createElement("div");
   section.classList.add("profile");
@@ -11,6 +10,7 @@ export function templateProfilePageInfo(profileData) {
   <p>Name: ${profileData.name}</p>
   <p>Email: ${profileData.email}</p>
   <p>Credits: ${profileData.credits}</p>
+  <p>Listings: ${profileData._count.listings}</p>
   </div>`;
 
   return section;

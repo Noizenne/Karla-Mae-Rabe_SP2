@@ -1,6 +1,5 @@
 import { AUCTION_URL } from "../constants.mjs";
 import { load } from "../../storage/index.mjs";
-import { getToken } from "../auth/getToken.mjs";
 
 const action = "/listings";
 
@@ -24,7 +23,6 @@ headers: {
 // Get single listing
 
 export async function getListing(id = window.location.search) { 
-  
   const response = await fetch(`${AUCTION_URL}${action}/${id}`, {
     headers: {
             "Content-Type": "application/json"

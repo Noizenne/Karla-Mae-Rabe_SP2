@@ -6,15 +6,19 @@ const path = location.pathname;
 
 if (path === "/index.html") {
   templates.allListingsTemplate();
+  handlers.logoutListener();
 } else if (path === "/Treasures/listings/index.html") {
   templates.allListingsTemplate();
+  handlers.logoutListener();
 } else if(path === "/Treasures/listings/listing/index.html") {
   templates.singleListingTemplate();
+  handlers.logoutListener();
 } else if (path === "/Treasures/login/index.html") {
   handlers.setLoginFormListener();
 } else if (path === "/Treasures/register/index.html") {
   handlers.setRegisterFormListener();
 } else if (path === "/Treasures/profile/index.html") {
   templates.profileTemplate();
-  templates.listingsTemplate();
+  templates.profileListingsTemplate();
+  handlers.logoutListener();
 }

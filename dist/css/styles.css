@@ -10809,6 +10809,10 @@ img {
   margin: auto;
 }
 
+.logout:hover {
+  cursor: pointer;
+}
+
 a {
   text-decoration: none;
   color: #463205;
