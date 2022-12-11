@@ -16,7 +16,7 @@
       src="https://kit.fontawesome.com/d527618ed6.js"
       crossorigin="anonymous"
     ></script>
-    <title>Treasures | Profile</title>
+    <title>Treasures | Login</title>
   </head>
   <body>
     <header>
@@ -92,19 +92,79 @@
         </div>
       </nav>
     </header>
+
     <main>
-      <section class="profileInfo"></section>
-      <section class="profileListings p-3 d-flex justify-content-center row">
-        <div class="d-flex justify-content-between">
-          <h1>Listings</h1>
-          <button
-            class="btn"
-            id="plus"
-            onclick="location.href='/Treasures/profile/create/index.html'"
-            style="border: none"
-          >
-            <i class="fa-sharp fa-solid fa-plus"></i>
-          </button>
+      <section>
+        <div class="createListing mt-3">
+          <div class="container">
+            <div
+              id="createListing-row"
+              class="row justify-content-center align-items-center"
+            >
+              <div id="createListing-column" class="col-md-6">
+                <div id="createListing-box" class="col-md-12">
+                  <form id="createListing-form">
+                    <h3 class="text-center mt-3">Create a listing</h3>
+                    <div class="form-group">
+                      <label for="title">Title</label><br />
+                      <input
+                        type="text"
+                        name="title"
+                        id="title"
+                        class="form-control"
+                        placeholder="Required"
+                        required
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="description">Description</label><br />
+                      <textarea
+                        type="text"
+                        name="description"
+                        id="description"
+                        class="form-control"
+                        maxlength="50"
+                      ></textarea>
+                    </div>
+                    <div class="form-group">
+                      <label for="tags">Tags</label><br />
+                      <input
+                        type="text"
+                        name="tags"
+                        id="tags"
+                        class="form-control"
+                        title="Seperate tags with commas"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="media">Media</label><br />
+                      <input
+                        type="url"
+                        name="media"
+                        id="media"
+                        class="form-control"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="endsAt">Ends at</label><br />
+                      <input
+                        type="datetime-local"
+                        name="endsAt"
+                        id="endsAt"
+                        class="form-control"
+                        required
+                      />
+                    </div>
+                    <div class="d-flex justify-content-center">
+                      <button type="submit" class="btn d-flex my-3">
+                        Submit
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
