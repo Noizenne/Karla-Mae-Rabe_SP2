@@ -7,12 +7,15 @@ const path = location.pathname;
 if (path === "/index.html") {
   templates.allListingsTemplate();
   handlers.logoutListener();
+  templates.loggedInName();
 } else if (path === "/Treasures/listings/index.html") {
   templates.allListingsTemplate();
   handlers.logoutListener();
+  templates.loggedInName();
 } else if(path === "/Treasures/listings/listing/index.html") {
   templates.singleListingTemplate();
   handlers.logoutListener();
+  templates.loggedInName();
 } else if (path === "/Treasures/login/index.html") {
   handlers.setLoginFormListener();
 } else if (path === "/Treasures/register/index.html") {
@@ -21,4 +24,5 @@ if (path === "/index.html") {
   templates.profileTemplate();
   templates.profileListingsTemplate();
   handlers.logoutListener();
+  templates.loggedInName();
 }

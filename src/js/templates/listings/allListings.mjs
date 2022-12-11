@@ -2,7 +2,6 @@ import { getListings } from "../../api/listings/index.mjs"
 
 export function templateListings(listingsData) {
 
-  console.log(listingsData)
   const section = document.createElement("div");
   section.classList.add("listing");
   section.classList.add("m-2");
