@@ -1,5 +1,4 @@
 import { load } from "../../storage/index.mjs"
-import { getProfile } from "../../api/profiles/index.mjs"
 
 export async function loggedInName() {
 
