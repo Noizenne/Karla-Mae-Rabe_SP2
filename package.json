@@ -1,6 +1,6 @@
 {
   "name": "karla-mae-rabe_sp2",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Auction house",
   "main": "index.js",
   "type": "module",
