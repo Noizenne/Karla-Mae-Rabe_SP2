@@ -5,7 +5,10 @@ export function templateProfilePageInfo(profileData) {
   const section = document.createElement("div");
   section.classList.add("profile");
   section.innerHTML = 
-  `<div class="profileAvatar">${profileData.avatar}</div>
+  `<div class="profileAvatar m-2 d-flex justify-content-center row">
+  <img class="d-flex justify-content-center" style="width:200px;" src="${profileData.avatar}" alt="Profile image"></img>
+  <div class="btn m-2" style="border:none; color:#0000FF;" onclick="location.href = '/Treasures/profile/edit.html'">Edit avatar</div>
+  </div> 
   <div class="profileDetails">
   <p>Name: ${profileData.name}</p>
   <p>Email: ${profileData.email}</p>
@@ -26,3 +29,11 @@ export async function profileTemplate() {
   const container = document.querySelector(".profileInfo");
   renderProfilePageInfo(profile, container);
 }
+
+
+/*<div class="">
+  <div class="profileAvatar m-2 d-flex justify-content-center row">
+  <img class="d-flex justify-content-center" src="${profileData.avatar}" alt="Profile image"></img>
+  <div class="btn m-2" onclick="location.href = '/Treasures/profile/edit.html'">Edit avatar</div>
+  </div>
+  </div> */

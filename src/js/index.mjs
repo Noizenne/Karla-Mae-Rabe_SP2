@@ -31,4 +31,7 @@ if (path === "/index.html") {
 } else if (path === "/Treasures/profile/create/index.html") {
   handlers.createListingListener()
   templates.loggedInName();
+} else if (path === "/Treasures/profile/edit.html") {
+  templates.loggedInName();
+  handlers.editAvatar();
 }

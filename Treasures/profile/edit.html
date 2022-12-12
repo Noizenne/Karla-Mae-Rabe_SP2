@@ -10,12 +10,13 @@
       integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="dist/css/styles.css" />
+    <link rel="stylesheet" href="/dist/css/styles.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/zaz4rtq.css" />
     <script
       src="https://kit.fontawesome.com/d527618ed6.js"
       crossorigin="anonymous"
     ></script>
-    <title>Treasures | Edit Profile Avatar</title>
+    <title>Treasures | Login</title>
   </head>
   <body>
     <header>
@@ -31,7 +32,7 @@
               />
             </form>
           </div>
-          <a class="navbar-brand" href="index.html"
+          <a class="navbar-brand" href="/index.html"
             ><img
               src="https://picsvg.com/svg/IcZZhS01.svg?v=30402"
               alt="The Treasures logo"
@@ -91,6 +92,42 @@
         </div>
       </nav>
     </header>
+
+    <main>
+      <section>
+        <div class="editAvatarmt-3">
+          <div class="container">
+            <div
+              id="editAvatar-row"
+              class="row justify-content-center align-items-center"
+            >
+              <div id="editAvatar-column" class="col-md-6">
+                <div id="editAvatar-box" class="col-md-12">
+                  <h3 class="text-center mt-3">Edit you avatar</h3>
+                  <form id="editAvatar-form">
+                    <div class="form-group">
+                      <label for=""></label><br />
+                      <input
+                        type="url"
+                        name="avatar"
+                        id="avatar"
+                        class="form-control"
+                        placeholder="Place your URL here"
+                      />
+                    </div>
+                    <div class="d-flex justify-content-center">
+                      <button type="submit" class="btn d-flex my-3">
+                        Edit
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
     <footer>
       <div class="footer d-flex justify-content-around mt-3">
         <div
@@ -133,5 +170,6 @@
       integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
       crossorigin="anonymous"
     ></script>
+    <script type="module" src="/src/js/index.mjs"></script>
   </body>
 </html>
