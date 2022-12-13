@@ -17,6 +17,10 @@ export async function createListing(listingData) {
         body: JSON.stringify(listingData)
     });
 
+    if(response.ok) {
+      console.log("Post success.")
+    }
+
     return await response.json();
 }
 

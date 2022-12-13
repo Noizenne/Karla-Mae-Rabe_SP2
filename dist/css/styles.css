@@ -10804,7 +10804,7 @@ img {
 }
 
 .login,
-.register {
+.register, .editAvatar {
   width: 50%;
   margin: auto;
 }

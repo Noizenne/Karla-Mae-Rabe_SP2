@@ -9,13 +9,15 @@ export function createListingListener() {
 
             const form = event.target;
             const formData = new FormData(form);
-            const post = Object.fromEntries(formData.entries());
+            const postData = Object.fromEntries(formData.entries());
+            postData.tags = postData.tags.split(", ").map((item) => item.trim());
+            postData.media = postData.media.split(", ").map((item) => item.trim());
 
-            if(!post.media.length) {
-                delete post.media;
+            if(!postData.media.length) {
+                delete postData.media;
             } 
 
-            createListing(post);
+            createListing(postData);
         })
     }
 }
