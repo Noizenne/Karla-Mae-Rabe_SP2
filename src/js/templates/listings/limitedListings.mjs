@@ -1,4 +1,4 @@
-import { getListings } from "../../api/listings/index.mjs"
+import { getListingsLimited } from "../../api/listings/index.mjs"
 
 export function templateListings(listingsData) {
 
@@ -28,8 +28,8 @@ export function templateListings(listingsData) {
 export function renderListings(listingsData, parent) {
   parent.append(...listingsData.map(templateListings));
 }
-export async function allListingsTemplate() {
-  const listings = await getListings();
+export async function limitedTemplate() {
+  const listings = await getListingsLimited();
   const container = document.querySelector(".listings");
   renderListings(listings, container);
 }

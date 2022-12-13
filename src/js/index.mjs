@@ -5,7 +5,7 @@ const path = location.pathname;
 
 
 if (path === "/index.html") {
-  templates.allListingsTemplate();
+  templates.limitedTemplate();
   handlers.logoutListener();
   templates.loggedInName();
 } else if (path === "/Treasures/listings/index.html") {
@@ -34,4 +34,8 @@ if (path === "/index.html") {
 } else if (path === "/Treasures/profile/edit.html") {
   templates.loggedInName();
   handlers.editAvatar();
+} else if(path === "/Treasures/user/index.html") {
+  templates.userTemplate();
+  templates.userListingsTemplate();
+  templates.loggedInName();
 }

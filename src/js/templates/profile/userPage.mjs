@@ -1,7 +1,10 @@
-import { getProfile } from "../../api/profiles/index.mjs";
+import { getUser} from "../../api/profiles/index.mjs";
 
-export function templateProfilePageInfo(profileData) {
+const parameterString = window.location.search;
+const searchParams = new URLSearchParams(parameterString);
+const name = searchParams.get("name");
 
+export function templateUserPageInfo(profileData) {
   const section = document.createElement("div");
   section.classList.add("profile");
   section.innerHTML = 
@@ -13,19 +16,18 @@ export function templateProfilePageInfo(profileData) {
   <p>Name: ${profileData.name}</p>
   <p>Email: ${profileData.email}</p>
   <p>Credits: ${profileData.credits}</p>
-  <p>Listings: ${profileData._count.listings}</p>
   </div>`;
 
   return section;
 }
 
-export function renderProfilePageInfo(profileData, parent) {
-  parent.append(templateProfilePageInfo(profileData));
+export function renderUserPageInfo(profileData, parent) {
+  parent.append(templateUserPageInfo(profileData));
 }
 
-export async function profileTemplate() {
-  const profile = await getProfile();
+export async function userTemplate() {
+  const profile = await getUser(name);
 
-  const container = document.querySelector(".profileInfo");
-  renderProfilePageInfo(profile, container);
+  const container = document.querySelector(".userInfo");
+  renderUserPageInfo(profile, container);
 }

@@ -10804,7 +10804,8 @@ img {
 }
 
 .login,
-.register, .editAvatar {
+.register,
+.editAvatar {
   width: 50%;
   margin: auto;
 }
@@ -10856,6 +10857,10 @@ p,
   font-size: 25px;
   border: solid 1px #463205;
   padding: 10px;
+}
+
+.listings {
+  margin: 30px;
 }
 
 .single {

@@ -23,7 +23,7 @@ export function templateListing(listingData) {
       <div class="d-flex justify-content-center">Bids: ${listingData._count.bids}</div>
       <div class="d-flex justify-content-center">Description:</div>
       <div class="d-flex justify-content-center">${listingData.description}</div>
-      <div class="d-flex justify-content-center">Seller: &nbsp; <a href="/Treasures/profile/index.html?name=${listingData.seller.name}">${listingData.seller.name}</a></div>
+      <div class="d-flex justify-content-center">Seller: &nbsp; <a href="/Treasures/user/index.html?name=${listingData.seller.name}">${listingData.seller.name}</a></div>
       </div>`;
 
     return section;   
