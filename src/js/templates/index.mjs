@@ -6,3 +6,4 @@ export * from "./listings/singleListing.mjs"
 export * from "./profile/isLoggedIn.mjs"
 export * from "./profile/userPage.mjs"
 export * from "./profile/userListing.mjs"
+export * from "./listings/bidders.mjs";

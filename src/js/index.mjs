@@ -14,6 +14,7 @@ if (path === "/index.html") {
   templates.loggedInName();
 } else if(path === "/Treasures/listings/listing/index.html") {
   templates.singleListingTemplate();
+  templates.biddersTemplate();
   handlers.logoutListener();
   templates.loggedInName();
 } else if(path === "/Treasures/listings/listing/bid/index.html")  {
