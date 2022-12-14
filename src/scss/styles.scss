@@ -6,7 +6,7 @@
 body {
   width: 70%;
   margin: auto;
-  background-color: $primary-color;
+  background-image: radial-gradient($text-color, $primary-color);
   color: $text-color;
 }
 
@@ -115,4 +115,8 @@ p,
 
 .profileListings {
   margin-top: 20px;
+}
+
+#text {
+  display: none;
 }

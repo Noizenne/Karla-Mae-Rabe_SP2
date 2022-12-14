@@ -6,6 +6,7 @@ const path = location.pathname;
 
 if (path === "/index.html") {
   templates.limitedTemplate();
+  handlers.searchListener();
   handlers.logoutListener();
   templates.loggedInName();
 } else if (path === "/Treasures/listings/index.html") {

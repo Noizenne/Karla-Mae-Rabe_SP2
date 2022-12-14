@@ -10778,7 +10778,7 @@ textarea.form-control-lg {
 body {
   width: 70%;
   margin: auto;
-  background-color: #e9e0cf;
+  background-image: radial-gradient(#463205, #e9e0cf);
   color: #463205;
 }
 
@@ -10885,6 +10885,10 @@ p,
 
 .profileListings {
   margin-top: 20px;
+}
+
+#text {
+  display: none;
 }
 
 /*# sourceMappingURL=styles.css.map */
