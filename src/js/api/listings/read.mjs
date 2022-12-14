@@ -89,3 +89,8 @@ export async function getListingsFromUser(name) {
 
   return await response.json();
 }
+
+/* const bid = event.target.amount.value;
+
+       postBid(bid, Number(bid));
+      console.log(bid, Number(bid)) */

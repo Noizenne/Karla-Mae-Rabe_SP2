@@ -25,24 +25,25 @@ export async function createListing(listingData) {
 }
 
   // Bid on entry
-
-  export async function postBid(id, amount) { 
-    const response = await fetch(`${AUCTION_URL}${action}/${id}/bids`, {
-      headers: {
-        method,
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${token}`,
-        },
-        body: JSON.stringify({
-            amount: amount
-        })
+  
+  export async function postBid(id, amount) {
+    const CREATE_BID_URL = `${AUCTION_URL}${action}/${id}/bids`;
+  
+    const response = await getToken(CREATE_BID_URL, {
+      method,
+      body: JSON.stringify({ amount: amount }),
     });
+  
+    if (response.ok) {
+      console.log("Success");
 
-    const {user} = await response.json();
-
-    if(response.ok) {
-        save("profile", user)
-        return await response.json();
+      location.href = `/Treasures/listings/listing/index.html?id=${id}`
+      return await response.json();
     }
-    throw new Error(response)
+  
+    throw new Error(response);
   }
+
+  // Find out how to update new credits in localstorage
+
+  
