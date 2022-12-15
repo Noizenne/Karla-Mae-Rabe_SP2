@@ -7,13 +7,17 @@ const id = searchParams.get("id");
 const container = document.querySelector(".bidders");
 
 export function biddersListing(listingData) {
+  if (listingData.bids == 0) {
+    document.querySelector(".noBids").innerHTML = "No bidders yet.";
+    return;
+  }
   listingData.bids.forEach((bidders) => {
     const section = document.createElement("div");
     section.classList.add("topBidders");
     section.classList.add("m-2");
     section.innerHTML = `<a href="/Treasures/user/index.html?name=${bidders.bidderName}">
      <div class="bidder">
-     <div>${bidders.amount}</div>
+     <div style="font-size: 20px; font-weight: bold;">${bidders.amount} credits</div>
      <p>${bidders.bidderName}</p>
       </div>
       </a>`;

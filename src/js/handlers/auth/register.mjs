@@ -1,6 +1,5 @@
 import { register } from "../../api/auth/register.mjs";
 
-
 export function setRegisterFormListener() {
   const form = document.querySelector(".register-form");
 

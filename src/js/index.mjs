@@ -3,7 +3,6 @@ import * as templates from "./templates/index.mjs";
 
 const path = location.pathname;
 
-
 if (path === "/index.html") {
   templates.limitedTemplate();
   handlers.searchListener();
@@ -13,12 +12,12 @@ if (path === "/index.html") {
   templates.allListingsTemplate();
   handlers.logoutListener();
   templates.loggedInName();
-} else if(path === "/Treasures/listings/listing/index.html") {
+} else if (path === "/Treasures/listings/listing/index.html") {
   templates.singleListingTemplate();
   templates.biddersTemplate();
   handlers.logoutListener();
   templates.loggedInName();
-} else if(path === "/Treasures/listings/listing/bid/index.html")  {
+} else if (path === "/Treasures/listings/listing/bid/index.html") {
   handlers.biddingFormListener();
   templates.loggedInName();
 } else if (path === "/Treasures/login/index.html") {
@@ -31,12 +30,12 @@ if (path === "/index.html") {
   handlers.logoutListener();
   templates.loggedInName();
 } else if (path === "/Treasures/profile/create/index.html") {
-  handlers.createListingListener()
+  handlers.createListingListener();
   templates.loggedInName();
 } else if (path === "/Treasures/profile/edit.html") {
   templates.loggedInName();
   handlers.editAvatar();
-} else if(path === "/Treasures/user/index.html") {
+} else if (path === "/Treasures/user/index.html") {
   templates.userTemplate();
   templates.userListingsTemplate();
   templates.loggedInName();

@@ -11,7 +11,7 @@ export function newDate(date) {
   var seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
   if (difference < 0) {
-   return document.getElementsByClassName("date").innerHTML = "Ended";
+    return (document.getElementsByClassName("date").innerHTML = "Ended");
   }
 
   return (document.getElementsByClassName("date").innerHTML =

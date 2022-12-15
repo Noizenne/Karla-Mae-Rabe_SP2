@@ -10933,7 +10933,9 @@ p,
   }
 }
 @media only screen and (max-width: 768px) {
-  h1, .h1, h2, .h2 {
+  h1, .h1,
+  h2,
+  .h2 {
     text-align: center;
   }
 }
@@ -10951,7 +10953,8 @@ p,
   }
 }
 @media only screen and (max-width: 500px) {
-  .single, .profile {
+  .single,
+  .profile {
     display: flex;
     flex-direction: column;
     align-items: center;

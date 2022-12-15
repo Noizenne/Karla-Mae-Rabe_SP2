@@ -13,9 +13,8 @@ export async function searchListener() {
     console.log(listings);
 
     const filteredListings = listings.filter((listing) => {
-
       const endsAt = listing.endsAt;
-  const endsAtDate = newDate(endsAt);
+      const endsAtDate = newDate(endsAt);
       const title = listing.title.toLowerCase();
 
       const searchValue = searchInput.value.toLowerCase();
@@ -39,7 +38,3 @@ export async function searchListener() {
     getListings(filteredListings, listingsContainer);
   });
 }
-
-/*<a href="/Treasures/listings/listing/index.html?id=${listingsData.id}">
-   <div class="d-flex justify-content-center text-align-center">${listingsData.title}</div>
-    <div class="date d-flex justify-content-center align-items-center"><i class="fa-solid fa-hourglass-start"></i>${endsAtDate}</div></a> */

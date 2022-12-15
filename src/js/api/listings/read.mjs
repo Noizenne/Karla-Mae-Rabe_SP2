@@ -54,7 +54,6 @@ export async function getListing(id = window.location.search) {
 //get listings from a specific user
 
 export async function getListingsFromProfile(name = load("profile").name) {
-  console.log(name);
   const token = load("token");
 
   const response = await fetch(`${AUCTION_URL}/profiles/${name}/listings`, {

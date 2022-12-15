@@ -11,7 +11,6 @@ export function templateListing(listingData) {
 
   const section = document.createElement("div");
   section.classList.add("single");
-  section.classList.add("m-1");
   section.innerHTML = `<div class="d-flex justify-content-center row">
       <div class="d-flex justify-content-center"><img style="solid 1px white" src="${listingData.media}"</img></div>
       <div class="d-flex justify-content-center">Seller: &nbsp; <a href="/Treasures/user/index.html?name=${listingData.seller.name}">${listingData.seller.name}</a></div>

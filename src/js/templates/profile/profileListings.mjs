@@ -4,7 +4,9 @@ import { newDate } from "../../tool/countdown.mjs";
 const container = document.querySelector(".profileListings");
 
 export function templateProfileListings(listingData) {
+  
   listingData.forEach((listings) => {
+
     const endsAt = listings.endsAt;
     const endsAtDate = newDate(endsAt);
 
@@ -17,9 +19,15 @@ export function templateProfileListings(listingData) {
      <div class="d-flex justify-content-center align-items-center  date"><i class="fa-solid fa-hourglass-start"></i>${endsAtDate}</div></a>
      <div class="d-flex justify-content-center"><img src="${listings.media}"</img></div>
     `;
-
+    
+    if (!listings) {
+      document.querySelector(".noListing").innerHTML = "No listings yet.";
+      return;
+    }  
     container.appendChild(section);
+   
   });
+  
 }
 
 export function renderProfileListings(listingData, parent) {

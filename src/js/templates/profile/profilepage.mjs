@@ -4,8 +4,7 @@ export function templateProfilePageInfo(profileData) {
 
   const section = document.createElement("div");
   section.classList.add("profile");
-  section.innerHTML = 
-  `<div class="profileAvatar m-2 d-flex justify-content-center row">
+  section.innerHTML = `<div class="profileAvatar m-2 d-flex justify-content-center row">
   <img class="d-flex justify-content-center" style="width:200px;" src="${profileData.avatar}" alt="Profile image"></img>
   <div class="btn m-2" style="border:none; color:#0000FF;" onclick="location.href = '/Treasures/profile/edit.html'">Edit avatar</div>
   </div> 
@@ -15,7 +14,7 @@ export function templateProfilePageInfo(profileData) {
   <p>Credits: ${profileData.credits}</p>
   <p>Listings: ${profileData._count.listings}</p>
   </div>`;
-
+  
   return section;
 }
 

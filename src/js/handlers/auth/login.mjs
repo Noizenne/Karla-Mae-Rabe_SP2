@@ -12,7 +12,5 @@ export function setLoginFormListener() {
     console.log("Logged In");
     console.log(profile);
     login(profile);
-    
   });
 }
- 
