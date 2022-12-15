@@ -6,7 +6,7 @@
 body {
   width: 70%;
   margin: auto;
-  background-image: radial-gradient($text-color, $primary-color);
+  background-color: $primary-color;
   color: $text-color;
 }
 
@@ -86,8 +86,14 @@ p,
   width: 250px;
   height: 320px;
   font-size: 25px;
-  border: solid 1px $text-color;
+  border: solid 1px white;
   padding: 10px;
+  text-align: center;
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(255, 166, 64, 0.322),
+    rgba(245, 61, 61, 0.356)
+  );
 }
 
 .listings {
@@ -95,11 +101,18 @@ p,
 }
 .single {
   display: flex;
-  flex-direction: row;
   padding: 30px;
+  border: solid 1px white;
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(255, 166, 64, 0.322),
+    rgba(245, 61, 61, 0.356)
+  );
+  height: 300px;
 }
 
-.small {
+.date {
+  background-color: rgba(255, 255, 255, 0.205);
   font-size: 15px;
 }
 
@@ -117,6 +130,20 @@ p,
   margin-top: 20px;
 }
 
-#text {
-  display: none;
+.bidders {
+  display: flex;
+  height: 300px;
+  width: 300px;
+}
+
+.bidder {
+  border: solid 1px white;
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(255, 166, 64, 0.322),
+    rgba(245, 61, 61, 0.356)
+  );
+  width: 80px;
+  display: flex row;
+  text-align: center;
 }
