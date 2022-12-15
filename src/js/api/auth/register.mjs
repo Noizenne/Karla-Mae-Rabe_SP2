@@ -5,7 +5,7 @@ const method = "post";
 
 export async function register(profile) {
   const registerURL = `${AUCTION_URL}${action}`;
-  console.log(registerURL)
+  console.log(registerURL);
   const body = JSON.stringify(profile);
 
   const response = await fetch(registerURL, {
@@ -16,7 +16,9 @@ export async function register(profile) {
     body,
   });
 
-  if(response.ok) {
+  if (response.ok) {
+    alert("You can now login.")
+    location.href = "/Treasures/login/index.html";
     return await response.json();
   }
   throw new Error(response.statusText);

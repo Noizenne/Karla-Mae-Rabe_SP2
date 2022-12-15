@@ -10951,11 +10951,11 @@ p,
   }
 }
 @media only screen and (max-width: 500px) {
-  .single {
+  .single, .profile {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 450px;
+    height: 500px;
   }
   .bidders {
     height: auto;
