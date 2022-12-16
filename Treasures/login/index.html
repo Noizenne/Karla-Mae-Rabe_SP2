@@ -20,23 +20,17 @@
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid d-flex justify-content-around">
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <form class="d-flex" role="search">
-              <input
-                class="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-            </form>
-          </div>
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+          <!-- Navbar brand -->
           <a class="navbar-brand" href="/index.html"
             ><img
               src="https://picsvg.com/svg/lRcWCi01.svg?v=31052"
               alt="The Treasures logo"
           /></a>
+
+          <!-- Toggle button -->
           <button
             class="navbar-toggler"
             type="button"
@@ -54,12 +48,16 @@
           >
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" href="/Treasures/login/index.html">Login</a>
+                <a
+                  class="nav-link"
+                  id="login-link"
+                  href="/Treasures/login/index.html"
+                  >Login</a
+                >
               </li>
               <li class="nav-item">
                 <a
-                  class="nav-link"
-                  id="register-link"
+                  class="nav-link btn active"
                   href="/Treasures/register/index.html"
                   >Sign Up</a
                 >
@@ -71,51 +69,47 @@
     </header>
 
     <main>
-      <div class="login mt-3">
+      <div class="login col-md-5 m-auto">
         <div class="container">
           <div
             id="login-row"
             class="row justify-content-center align-items-center"
           >
-            <div id="login-column" class="col-md-6">
-              <div id="login-box" class="col-md-12">
-                <form class="login-form">
-                  <h3 class="text-center mt-3">Login</h3>
-                  <div class="form-group">
-                    <label for="email">Email</label><br />
-                    <input
-                      type="text"
-                      name="email"
-                      id="email"
-                      class="form-control"
-                      required
-                      pattern="^[\w\-.]+@(stud.)?noroff.no$"
-                      title="Email must include noroff.no or stud.noroff.no"
-                    />
-                  </div>
-                  <div class="form-group">
-                    <label for="password">Password</label><br />
-                    <input
-                      type="password"
-                      name="password"
-                      id="password"
-                      class="form-control"
-                      required
-                      minlength="8"
-                      title="Your password must have at least 8 characters"
-                    />
-                  </div>
-                  <div class="d-flex justify-content-center">
-                    <button type="submit" class="btn d-flex my-3">Login</button>
-                  </div>
-                </form>
+            <form class="login-form">
+              <h3 class="text-center mt-3">Login</h3>
+              <div class="form-group">
+                <label for="email">Email</label><br />
+                <input
+                  type="text"
+                  name="email"
+                  id="email"
+                  class="form-control"
+                  required
+                  pattern="^[\w\-.]+@(stud.)?noroff.no$"
+                  title="Email must include noroff.no or stud.noroff.no"
+                />
               </div>
-            </div>
+              <div class="form-group">
+                <label for="password">Password</label><br />
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  class="form-control"
+                  required
+                  minlength="8"
+                  title="Your password must have at least 8 characters"
+                />
+              </div>
+              <div class="d-flex justify-content-center">
+                <button type="submit" class="btn d-flex my-3">Login</button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
     </main>
-    <footer>
+    <footer class="fixed-bottom">
       <div class="footer d-flex justify-content-around mt-3">
         <div
           class="footer-right d-flex justify-content-center row"

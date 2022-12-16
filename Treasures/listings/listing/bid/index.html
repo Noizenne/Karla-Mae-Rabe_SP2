@@ -19,23 +19,16 @@
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid d-flex justify-content-around">
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <form class="d-flex" role="search">
-              <input
-                class="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-            </form>
-          </div>
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+          <!-- Navbar brand -->
           <a class="navbar-brand" href="/index.html"
             ><img
               src="https://picsvg.com/svg/lRcWCi01.svg?v=31052"
               alt="The Treasures logo"
           /></a>
+
+          <!-- Toggle button -->
           <button
             class="navbar-toggler"
             type="button"
@@ -57,15 +50,15 @@
                   <a
                     class="nav-link me-4"
                     id="login-link"
-                    href="/Treasures/login/index.html"
+                    href="Treasures/login/index.html"
                     >Login</a
                   >
                 </li>
                 <li class="nav-item">
                   <a
-                    class="nav-link"
+                    class="nav-link btn"
                     id="register-link"
-                    href="/Treasures/register/index.html"
+                    href="Treasures/register/index.html"
                     >Sign Up</a
                   >
                 </li>
@@ -92,10 +85,7 @@
       </nav>
     </header>
     <main>
-      <section
-        class="d-flex justify-content-center m-auto"
-        style="width: 500px; height: 300px"
-      >
+      <section class="bid d-flex justify-content-center">
         <div>
           <form class="bid-form">
             <h3 class="text-center mt-3">Place a bid</h3>
@@ -108,17 +98,18 @@
                 name="amount"
                 id="amount-input"
                 class="form-control"
-                style="width: 300px"
+                style="width: auto"
               />
             </div>
             <div class="d-flex justify-content-center">
               <button type="submit" class="btn d-flex my-3">Place bid</button>
             </div>
           </form>
+          <div class="bidError d-flex justify-content-center"></div>
         </div>
       </section>
     </main>
-    <footer>
+    <footer class="fixed-bottom">
       <div class="footer d-flex justify-content-around mt-3">
         <div
           class="footer-right d-flex justify-content-center row"

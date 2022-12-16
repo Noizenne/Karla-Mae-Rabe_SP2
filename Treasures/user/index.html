@@ -20,23 +20,16 @@
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid d-flex justify-content-around">
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <form class="d-flex" role="search">
-              <input
-                class="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-            </form>
-          </div>
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+          <!-- Navbar brand -->
           <a class="navbar-brand" href="/index.html"
             ><img
               src="https://picsvg.com/svg/lRcWCi01.svg?v=31052"
               alt="The Treasures logo"
           /></a>
+
+          <!-- Toggle button -->
           <button
             class="navbar-toggler"
             type="button"
@@ -64,7 +57,7 @@
                 </li>
                 <li class="nav-item">
                   <a
-                    class="nav-link"
+                    class="nav-link btn"
                     id="register-link"
                     href="Treasures/register/index.html"
                     >Sign Up</a
@@ -94,12 +87,14 @@
     </header>
     <main>
       <section class="userInfo">
+        <div class="loader"></div>
         <h1 class="m-3 p-3">Profile</h1>
       </section>
       <section class="userListings mt-3 d-flex justify-content-center row">
         <div class="d-flex justify-content-between">
           <h1>Listings</h1>
         </div>
+        <div class="noListing"></div>
       </section>
     </main>
     <footer>

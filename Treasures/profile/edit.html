@@ -20,23 +20,16 @@
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid d-flex justify-content-around">
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <form class="d-flex" role="search">
-              <input
-                class="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-            </form>
-          </div>
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+          <!-- Navbar brand -->
           <a class="navbar-brand" href="/index.html"
             ><img
               src="https://picsvg.com/svg/lRcWCi01.svg?v=31052"
               alt="The Treasures logo"
           /></a>
+
+          <!-- Toggle button -->
           <button
             class="navbar-toggler"
             type="button"
@@ -64,7 +57,7 @@
                 </li>
                 <li class="nav-item">
                   <a
-                    class="nav-link"
+                    class="nav-link btn"
                     id="register-link"
                     href="Treasures/register/index.html"
                     >Sign Up</a
@@ -95,40 +88,34 @@
 
     <main>
       <section>
-        <div class="editAvatar">
+        <div class="editAvatar col-md-5 m-auto">
           <div class="container">
             <div
               id="editAvatar-row"
               class="row justify-content-center align-items-center"
             >
-              <div id="editAvatar-column" class="col-md-6">
-                <div id="editAvatar-box" class="col-md-12">
-                  <h3 class="text-center mt-3">Edit you avatar</h3>
-                  <form id="editAvatar-form">
-                    <div class="form-group">
-                      <label for=""></label><br />
-                      <input
-                        type="url"
-                        name="avatar"
-                        id="avatar"
-                        class="form-control"
-                        placeholder="Place your URL here"
-                      />
-                    </div>
-                    <div class="d-flex justify-content-center">
-                      <button type="submit" class="btn d-flex my-3">
-                        Edit
-                      </button>
-                    </div>
-                  </form>
+              <h3 class="text-center mt-3">Edit you avatar</h3>
+              <form id="editAvatar-form">
+                <div class="form-group">
+                  <label for=""></label><br />
+                  <input
+                    type="url"
+                    name="avatar"
+                    id="avatar"
+                    class="form-control"
+                    placeholder="Place your URL here"
+                  />
                 </div>
-              </div>
+                <div class="d-flex justify-content-center">
+                  <button type="submit" class="btn d-flex my-3">Edit</button>
+                </div>
+              </form>
             </div>
           </div>
         </div>
       </section>
     </main>
-    <footer>
+    <footer class="fixed-bottom">
       <div class="footer d-flex justify-content-around mt-3">
         <div
           class="footer-right d-flex justify-content-center row"

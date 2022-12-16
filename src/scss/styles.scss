@@ -24,7 +24,6 @@ img {
   color: $tertiary-color;
 }
 
-#register-link,
 .btn {
   color: $text-color;
   border: solid 1px;
@@ -34,13 +33,6 @@ img {
 .btn:hover {
   background-color: $text-color;
   color: $primary-color;
-}
-
-.login,
-.register,
-.editAvatar {
-  width: 50%;
-  margin: auto;
 }
 
 .logout:hover {
@@ -104,16 +96,17 @@ p,
 .listings {
   margin: 30px;
 }
+
 .single {
   display: flex;
   padding: 30px;
+  width: 100%;
   border: solid 1px white;
   background-image: linear-gradient(
     to bottom right,
     rgba(255, 166, 64, 0.322),
     rgba(245, 61, 61, 0.356)
   );
-  height: 300px;
 }
 
 .date {
@@ -136,6 +129,18 @@ p,
   margin-top: 20px;
 }
 
+.noListing,
+.noBids,
+.bidError {
+  color: red;
+}
+
+.bid {
+  margin: auto;
+  width: 500px;
+  height: 300px;
+}
+
 .bidders {
   display: flex;
   height: 300px;
@@ -149,8 +154,7 @@ p,
     rgba(255, 166, 64, 0.322),
     rgba(245, 61, 61, 0.356)
   );
-  width: 80px;
-  display: flex row;
+  width: 100px;
   text-align: center;
 }
 
@@ -185,6 +189,12 @@ p,
   body {
     width: 100%;
   }
+
+  .bid {
+    width: 100%;
+    margin: auto;
+  }
+
   .bidders {
     display: flex;
     flex-direction: column;
@@ -192,6 +202,10 @@ p,
     align-items: center;
     height: auto;
     width: auto;
+  }
+
+  footer {
+    width: 100%;
   }
 }
 @media only screen and (max-width: 500px) {
@@ -205,10 +219,5 @@ p,
 
   .bidders {
     height: auto;
-  }
-  .footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
   }
 }
