@@ -1,6 +1,6 @@
 {
   "name": "karla-mae-rabe_sp2",
-  "version": "1.0.5",
+  "version": "1.0.9",
   "description": "Auction house",
   "main": "index.js",
   "type": "module",
@@ -8,9 +8,9 @@
     "build": "sass src/scss:dist/css",
     "start": "sass --watch src/scss:dist/css & live-server",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "format": "prettier -w src/js/**/*.js",
-    "lint": "eslint src/**/*.js",
-    "lint-fix": "eslint src/**/*.js --cache --fix",
+    "format": "prettier -w src/js/**/*.mjs",
+    "lint": "eslint src/**/*.mjs",
+    "lint-fix": "eslint src/**/*.mjs --cache --fix",
     "prepare": "husky install"
   },
   "repository": {

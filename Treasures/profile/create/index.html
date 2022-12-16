@@ -10,30 +10,23 @@
       integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="dist/css/styles.css" />
+    <link rel="stylesheet" href="/dist/css/styles.css" />
     <link rel="stylesheet" href="https://use.typekit.net/zaz4rtq.css" />
     <script
       src="https://kit.fontawesome.com/d527618ed6.js"
       crossorigin="anonymous"
     ></script>
-    <title>Welcome to Treasures</title>
+    <title>Treasures | Create new listing</title>
   </head>
   <body>
     <header>
       <nav class="navbar navbar-expand-lg">
         <div class="container-fluid d-flex justify-content-around">
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <form class="d-flex" role="search" id="search">
-              <input
-                class="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-                id="searchInput"
-              />
-            </form>
-          </div>
-          <a class="navbar-brand" href="index.html"
+          <div
+            class="collapse navbar-collapse"
+            id="navbarSupportedContent"
+          ></div>
+          <a class="navbar-brand" href="/index.html"
             ><img
               src="https://picsvg.com/svg/lRcWCi01.svg?v=31052"
               alt="The Treasures logo"
@@ -64,7 +57,10 @@
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link btn" href="Treasures/register/index.html"
+                  <a
+                    class="nav-link"
+                    id="register-link"
+                    href="Treasures/register/index.html"
                     >Sign Up</a
                   >
                 </li>
@@ -77,7 +73,7 @@
                 </li>
                 <li class="nav-item">
                   <button
-                    type="click"
+                    type="submit"
                     class="btn"
                     onclick="location.href='/Treasures/profile/index.html'"
                   >
@@ -90,30 +86,77 @@
         </div>
       </nav>
     </header>
+
     <main>
-      <section class="my-3">
-        <div class="row">
-          <div class="searchResult col p-3 me-3"></div>
-        </div>
-      </section>
-      <section>
-        <h1 class="m-3">Ongoing Auctions</h1>
-        <div class="listings p-3 d-flex justify-content-center row">
-          <div class="loader"></div>
-        </div>
-        <div class="p-3">
-          <button
-            type="submit"
-            class="btn"
-            style="display: block; margin: auto"
-            onclick="window.location.href='/Treasures/listings/index.html'"
-          >
-            Show All
-          </button>
+      <section class="m-auto col-md-5">
+        <div class="createListing mt-3">
+          <div class="container">
+            <div
+              id="createListing-row"
+              class="row justify-content-center align-items-center"
+            >
+              <form id="createListing-form">
+                <h3 class="text-center mt-3">Create a listing</h3>
+                <div class="form-group">
+                  <label for="title">Title</label><br />
+                  <input
+                    type="text"
+                    name="title"
+                    id="title"
+                    class="form-control"
+                    placeholder="Required"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="description">Description</label><br />
+                  <textarea
+                    type="text"
+                    name="description"
+                    id="description"
+                    class="form-control"
+                    maxlength="50"
+                  ></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="tags">Tags</label><br />
+                  <input
+                    type="text"
+                    name="tags"
+                    id="tags"
+                    class="form-control"
+                    title="Seperate tags with commas"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="media">Media</label><br />
+                  <input
+                    type="url"
+                    name="media"
+                    id="media"
+                    class="form-control"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="endsAt">Ends at</label><br />
+                  <input
+                    type="datetime-local"
+                    name="endsAt"
+                    id="endsAt"
+                    class="form-control"
+                    required
+                  />
+                </div>
+                <div class="d-flex justify-content-center">
+                  <button type="submit" class="btn d-flex my-3">Submit</button>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
       </section>
     </main>
-    <footer>
+    <footer class="fixed-bottom">
       <div class="footer d-flex justify-content-around mt-3">
         <div
           class="footer-right d-flex justify-content-center row"
@@ -136,7 +179,7 @@
             >Contact Us</a
           >
         </div>
-        <div class="footer-left">
+        <div class="footer-left col-md-5">
           <h2 class="d-flex justify-content-center">Social Media</h2>
           <div class="socials d-flex justify-content-center">
             <i class="fa-brands fa-instagram fa-3x m-2"></i>

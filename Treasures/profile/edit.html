@@ -10,34 +10,26 @@
       integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="dist/css/styles.css" />
+    <link rel="stylesheet" href="/dist/css/styles.css" />
     <link rel="stylesheet" href="https://use.typekit.net/zaz4rtq.css" />
     <script
       src="https://kit.fontawesome.com/d527618ed6.js"
       crossorigin="anonymous"
     ></script>
-    <title>Welcome to Treasures</title>
+    <title>Treasures | Edit avatar</title>
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid d-flex justify-content-around">
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <form class="d-flex" role="search" id="search">
-              <input
-                class="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-                id="searchInput"
-              />
-            </form>
-          </div>
-          <a class="navbar-brand" href="index.html"
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+          <!-- Navbar brand -->
+          <a class="navbar-brand" href="/index.html"
             ><img
               src="https://picsvg.com/svg/lRcWCi01.svg?v=31052"
               alt="The Treasures logo"
           /></a>
+
+          <!-- Toggle button -->
           <button
             class="navbar-toggler"
             type="button"
@@ -64,7 +56,10 @@
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link btn" href="Treasures/register/index.html"
+                  <a
+                    class="nav-link btn"
+                    id="register-link"
+                    href="Treasures/register/index.html"
                     >Sign Up</a
                   >
                 </li>
@@ -77,7 +72,7 @@
                 </li>
                 <li class="nav-item">
                   <button
-                    type="click"
+                    type="submit"
                     class="btn"
                     onclick="location.href='/Treasures/profile/index.html'"
                   >
@@ -90,30 +85,37 @@
         </div>
       </nav>
     </header>
+
     <main>
-      <section class="my-3">
-        <div class="row">
-          <div class="searchResult col p-3 me-3"></div>
-        </div>
-      </section>
       <section>
-        <h1 class="m-3">Ongoing Auctions</h1>
-        <div class="listings p-3 d-flex justify-content-center row">
-          <div class="loader"></div>
-        </div>
-        <div class="p-3">
-          <button
-            type="submit"
-            class="btn"
-            style="display: block; margin: auto"
-            onclick="window.location.href='/Treasures/listings/index.html'"
-          >
-            Show All
-          </button>
+        <div class="editAvatar col-md-5 m-auto">
+          <div class="container">
+            <div
+              id="editAvatar-row"
+              class="row justify-content-center align-items-center"
+            >
+              <h3 class="text-center mt-3">Edit you avatar</h3>
+              <form id="editAvatar-form">
+                <div class="form-group">
+                  <label for=""></label><br />
+                  <input
+                    type="url"
+                    name="avatar"
+                    id="avatar"
+                    class="form-control"
+                    placeholder="Place your URL here"
+                  />
+                </div>
+                <div class="d-flex justify-content-center">
+                  <button type="submit" class="btn d-flex my-3">Edit</button>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
       </section>
     </main>
-    <footer>
+    <footer class="fixed-bottom">
       <div class="footer d-flex justify-content-around mt-3">
         <div
           class="footer-right d-flex justify-content-center row"

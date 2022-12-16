@@ -10,34 +10,27 @@
       integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="dist/css/styles.css" />
+    <link rel="stylesheet" href="/dist/css/styles.css" />
     <link rel="stylesheet" href="https://use.typekit.net/zaz4rtq.css" />
     <script
       src="https://kit.fontawesome.com/d527618ed6.js"
       crossorigin="anonymous"
     ></script>
-    <title>Welcome to Treasures</title>
+    <title>Treasures | Login</title>
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid d-flex justify-content-around">
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <form class="d-flex" role="search" id="search">
-              <input
-                class="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-                id="searchInput"
-              />
-            </form>
-          </div>
-          <a class="navbar-brand" href="index.html"
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+          <!-- Navbar brand -->
+          <a class="navbar-brand" href="/index.html"
             ><img
               src="https://picsvg.com/svg/lRcWCi01.svg?v=31052"
               alt="The Treasures logo"
           /></a>
+
+          <!-- Toggle button -->
           <button
             class="navbar-toggler"
             type="button"
@@ -54,66 +47,69 @@
             id="navbarSupportedContent"
           >
             <ul class="navbar-nav">
-              <div class="not-logged-in d-flex">
-                <li class="nav-item">
-                  <a
-                    class="nav-link me-4"
-                    id="login-link"
-                    href="Treasures/login/index.html"
-                    >Login</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link btn" href="Treasures/register/index.html"
-                    >Sign Up</a
-                  >
-                </li>
-              </div>
-              <div class="logged-in d-none">
-                <li class="nav-item">
-                  <button class="btn me-2" style="border: none" id="logout">
-                    Logout
-                  </button>
-                </li>
-                <li class="nav-item">
-                  <button
-                    type="click"
-                    class="btn"
-                    onclick="location.href='/Treasures/profile/index.html'"
-                  >
-                    Profile
-                  </button>
-                </li>
-              </div>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  id="login-link"
+                  href="/Treasures/login/index.html"
+                  >Login</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link btn active"
+                  href="/Treasures/register/index.html"
+                  >Sign Up</a
+                >
+              </li>
             </ul>
           </div>
         </div>
       </nav>
     </header>
+
     <main>
-      <section class="my-3">
-        <div class="row">
-          <div class="searchResult col p-3 me-3"></div>
-        </div>
-      </section>
-      <section>
-        <h1 class="m-3">Ongoing Auctions</h1>
-        <div class="listings p-3 d-flex justify-content-center row">
-          <div class="loader"></div>
-        </div>
-        <div class="p-3">
-          <button
-            type="submit"
-            class="btn"
-            style="display: block; margin: auto"
-            onclick="window.location.href='/Treasures/listings/index.html'"
+      <div class="login col-md-5 m-auto">
+        <div class="container">
+          <div
+            id="login-row"
+            class="row justify-content-center align-items-center"
           >
-            Show All
-          </button>
+            <form class="login-form">
+              <h3 class="text-center mt-3">Login</h3>
+              <div class="form-group">
+                <label for="email">Email</label><br />
+                <input
+                  type="text"
+                  name="email"
+                  id="email"
+                  class="form-control"
+                  required
+                  pattern="^[\w\-.]+@(stud.)?noroff.no$"
+                  title="Email must include noroff.no or stud.noroff.no"
+                />
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label><br />
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  class="form-control"
+                  required
+                  minlength="8"
+                  title="Your password must have at least 8 characters"
+                />
+              </div>
+              <div class="d-flex justify-content-center">
+                <button type="submit" class="btn d-flex my-3">Login</button>
+              </div>
+            </form>
+          </div>
         </div>
-      </section>
+      </div>
     </main>
-    <footer>
+    <footer class="fixed-bottom">
       <div class="footer d-flex justify-content-around mt-3">
         <div
           class="footer-right d-flex justify-content-center row"
