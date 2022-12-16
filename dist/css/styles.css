@@ -8,11 +8,17 @@ body {
   background-color: #f2f3f9;
 }
 
-section, .login, .register, footer {
+section,
+.login,
+.register,
+footer {
   background-color: rgba(168, 188, 255, 0.2);
 }
 
-.login, .register {
+.login,
+.register {
   width: 50%;
   margin: auto;
 }
+
+/*# sourceMappingURL=styles.css.map */
