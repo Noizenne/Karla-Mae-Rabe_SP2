@@ -10890,7 +10890,9 @@ p,
   margin-top: 20px;
 }
 
-.noListing, .noBids, .bidError {
+.noListing,
+.noBids,
+.bidError {
   color: red;
 }
 
