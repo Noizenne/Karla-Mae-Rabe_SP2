@@ -2,6 +2,8 @@ import { load } from "../../storage/index.mjs";
 import { AUCTION_URL } from "../constants.mjs";
 import { getToken } from "../auth/getToken.mjs";
 
+const loader = document.querySelector(".loader");
+
 export async function getProfiles() {
   const response = await getToken(`${AUCTION_URL}/profiles`, {
     headers: {
@@ -30,6 +32,10 @@ export async function getProfile(name = load("profile").name) {
     }
   );
 
+  if (response.ok) {
+    loader.classList.remove("loader");
+  }
+
   if (!name) {
     throw new Error(response.statusText);
   }
@@ -51,6 +57,10 @@ export async function getUser(name) {
       },
     }
   );
+
+  if (response.ok) {
+    loader.classList.remove("loader");
+  }
 
   if (!name) {
     throw new Error(response.statusText);

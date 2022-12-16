@@ -1,7 +1,6 @@
 import { getProfile } from "../../api/profiles/index.mjs";
 
 export function templateProfilePageInfo(profileData) {
-
   const section = document.createElement("div");
   section.classList.add("profile");
   section.innerHTML = `<div class="profileAvatar m-2 d-flex justify-content-center row">
@@ -13,8 +12,9 @@ export function templateProfilePageInfo(profileData) {
   <p>Email: ${profileData.email}</p>
   <p>Credits: ${profileData.credits}</p>
   <p>Listings: ${profileData._count.listings}</p>
+  <p>Wins: ${profileData.wins}</p>
   </div>`;
-  
+
   return section;
 }
 

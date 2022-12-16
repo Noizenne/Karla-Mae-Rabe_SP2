@@ -17,7 +17,7 @@ export async function register(profile) {
   });
 
   if (response.ok) {
-    alert("You can now login.")
+    alert("You can now login.");
     location.href = "/Treasures/login/index.html";
     return await response.json();
   }

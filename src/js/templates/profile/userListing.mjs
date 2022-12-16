@@ -1,4 +1,3 @@
-import { isLoggedIn } from "../../api/auth/state.mjs";
 import { getListingsFromUser } from "../../api/listings/index.mjs";
 import { newDate } from "../../tool/countdown.mjs";
 
@@ -9,6 +8,11 @@ const searchParams = new URLSearchParams(parameterString);
 const name = searchParams.get("name");
 
 export function templateUserListings(listingData) {
+  console.log(listingData);
+  if (listingData.length == 0) {
+    document.querySelector(".noListing").innerHTML = `<p>No listings yet.</p>`;
+    return;
+  }
   listingData.forEach((listings) => {
     const endsAt = listings.endsAt;
     const endsAtDate = newDate(endsAt);

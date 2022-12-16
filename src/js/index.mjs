@@ -20,6 +20,7 @@ if (path === "/index.html") {
 } else if (path === "/Treasures/listings/listing/bid/index.html") {
   handlers.biddingFormListener();
   templates.loggedInName();
+  handlers.logoutListener();
 } else if (path === "/Treasures/login/index.html") {
   handlers.setLoginFormListener();
 } else if (path === "/Treasures/register/index.html") {
@@ -34,6 +35,7 @@ if (path === "/index.html") {
   templates.loggedInName();
 } else if (path === "/Treasures/profile/edit.html") {
   templates.loggedInName();
+  handlers.logoutListener();
   handlers.editAvatar();
 } else if (path === "/Treasures/user/index.html") {
   templates.userTemplate();

@@ -45,6 +45,10 @@ export async function getListing(id = window.location.search) {
     }
   );
 
+  if (response.ok) {
+    loader.classList.remove("loader");
+  }
+
   if (!id) {
     console.log("Get requires an id.");
   }
@@ -63,6 +67,10 @@ export async function getListingsFromProfile(name = load("profile").name) {
     },
   });
 
+  if (response.ok) {
+    loader.classList.remove("loader");
+  }
+
   if (!name) {
     throw new Error(response.statusText);
   }
@@ -80,14 +88,13 @@ export async function getListingsFromUser(name) {
     },
   });
 
+  if (response.ok) {
+    loader.classList.remove("loader");
+  }
+
   if (!name) {
     throw new Error(response.statusText);
   }
 
   return await response.json();
 }
-
-/* const bid = event.target.amount.value;
-
-       postBid(bid, Number(bid));
-      console.log(bid, Number(bid)) */

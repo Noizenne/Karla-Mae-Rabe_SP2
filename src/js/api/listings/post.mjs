@@ -1,6 +1,7 @@
 import { AUCTION_URL } from "../constants.mjs";
 import { load, save } from "../../storage/index.mjs";
 import { getToken } from "../auth/getToken.mjs";
+import { loggedInName } from "../../templates/index.mjs";
 
 const token = load("token");
 const action = "/listings";
@@ -33,14 +34,16 @@ export async function postBid(id, amount) {
     body: JSON.stringify({ amount: amount }),
   });
 
+  const bidError = document.querySelector(".bidError");
+
   if (response.ok) {
     console.log("Success");
-
-    location.href = `/Treasures/listings/listing/index.html?id=${id}`;
+    await loggedInName();
+    history.back();
     return await response.json();
+  } else {
+    bidError.innerHTML = "You must login to place a bid.";
   }
 
   throw new Error(response);
 }
-
-// Find out how to update new credits in localstorage
