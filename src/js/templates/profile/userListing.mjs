@@ -8,7 +8,7 @@ const searchParams = new URLSearchParams(parameterString);
 const name = searchParams.get("name");
 
 export function templateUserListings(listingData) {
-  console.log(listingData);
+  
   if (listingData.length == 0) {
     document.querySelector(".noListing").innerHTML = `<p>No listings yet.</p>`;
     return;
