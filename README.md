@@ -20,6 +20,6 @@ Commands:
 
 # Formatters used
 ## Prettier
-npm i -D prettier
+```npm i -D prettier```
 ## Eslint
-npm i -D eslint
+```npm i -D eslint```
