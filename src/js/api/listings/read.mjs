@@ -2,8 +2,14 @@ import { AUCTION_URL } from "../constants.mjs";
 import { load } from "../../storage/index.mjs";
 
 const loader = document.querySelector(".loader");
-
 const action = "/listings";
+
+/**
+ * Will get the gem listings from API
+ * 
+ * @param {*} listingData 
+ * @returns gem tag listings
+ */
 export async function getListings() {
   const response = await fetch(`${AUCTION_URL}${action}?_tag=gem`, {
     headers: {
@@ -17,8 +23,13 @@ export async function getListings() {
   }
   throw new Error(response.statusText);
 }
-// get listings by the gem tag and limit it by 8
 
+/**
+ * Will get the gem listings with a limit of 8 from API
+ * 
+ * @param {*} listingData 
+ * @returns 8 gem tag listings
+ */
 export async function getListingsLimited() {
   const response = await fetch(`${AUCTION_URL}${action}?_tag=gem&limit=8`, {
     headers: {
@@ -33,8 +44,12 @@ export async function getListingsLimited() {
   throw new Error(response.statusText);
 }
 
-// Get single listing
-
+/**
+ * Will get a single listing from API based on id
+ * 
+ * @param {*} id
+ * @returns one single listings from resuls
+ */
 export async function getListing(id = window.location.search) {
   const response = await fetch(
     `${AUCTION_URL}${action}/${id}?_seller=true&_bids=true`,
@@ -55,8 +70,12 @@ export async function getListing(id = window.location.search) {
   return await response.json();
 }
 
-//get listings from a specific user
-
+/**
+ * Will get listings from profile based on name
+ * 
+ * @param {string} name
+ * @returns listings from profile
+ */
 export async function getListingsFromProfile(name = load("profile").name) {
   const token = load("token");
 
@@ -78,6 +97,12 @@ export async function getListingsFromProfile(name = load("profile").name) {
   return await response.json();
 }
 
+/**
+ * Will get listings from user from API based on name
+ * 
+ * @param {string} name
+ * @returns listings from user
+ */
 export async function getListingsFromUser(name) {
   const token = load("token");
 

@@ -1,7 +1,10 @@
 import { AUCTION_URL } from "../constants.mjs";
-
 import * as storage from "../../storage/index.mjs";
 
+/**
+ * Will login user from API results.
+ * @param {object} profile
+ */
 const action = "/auth/login";
 const method = "post";
 

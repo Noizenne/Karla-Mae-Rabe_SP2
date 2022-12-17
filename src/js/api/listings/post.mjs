@@ -1,13 +1,15 @@
 import { AUCTION_URL } from "../constants.mjs";
-import { load, save } from "../../storage/index.mjs";
 import { getToken } from "../auth/getToken.mjs";
 import { loggedInName } from "../../templates/index.mjs";
-
-const token = load("token");
 const action = "/listings";
 const method = "post";
 
 // Create listing
+/**
+ * Will take in the listingData from user inputs
+ * @param {*} listingData 
+ * @returns the post
+ */
 
 export async function createListing(listingData) {
   const CREATE_POST_URL = `${AUCTION_URL}${action}`;
@@ -25,6 +27,12 @@ export async function createListing(listingData) {
 }
 
 // Bid on entry
+/**
+ * Will take in the id and amount from user inputs
+ * @param {number} amount
+ * @param {*} id
+ * @returns the set bid
+ */
 
 export async function postBid(id, amount) {
   const CREATE_BID_URL = `${AUCTION_URL}${action}/${id}/bids`;

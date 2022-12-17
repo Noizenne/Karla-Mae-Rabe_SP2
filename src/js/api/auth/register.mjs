@@ -1,5 +1,8 @@
 import { AUCTION_URL } from "../constants.mjs";
-
+/**
+ * Will register user and save results to API.
+ * @param {object} profile
+ */
 const action = "/auth/register";
 const method = "post";
 

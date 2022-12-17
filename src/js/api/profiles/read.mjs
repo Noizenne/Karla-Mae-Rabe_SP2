@@ -4,6 +4,11 @@ import { getToken } from "../auth/getToken.mjs";
 
 const loader = document.querySelector(".loader");
 
+/**
+ * Will get profiles from API
+ * 
+ * @returns all profiles
+ */
 export async function getProfiles() {
   const response = await getToken(`${AUCTION_URL}/profiles`, {
     headers: {
@@ -17,8 +22,11 @@ export async function getProfiles() {
   throw new Error(response.statusText);
 }
 
-//
-
+/**
+ * Will get a profile from API
+ * 
+ * @returns a profile with listings tag included
+ */
 export async function getProfile(name = load("profile").name) {
   const token = load("token");
 
@@ -43,8 +51,11 @@ export async function getProfile(name = load("profile").name) {
   return await response.json();
 }
 
-//
-
+/**
+ * Will get a user from API based on name
+ * 
+ * @returns a user
+ */
 export async function getUser(name) {
   const token = load("token");
 
