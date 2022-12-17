@@ -24,6 +24,7 @@
   </head>
   <body>
     <header>
+      <!-- Navbar -->
       <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
           <!-- Navbar brand -->
@@ -48,24 +49,23 @@
             id="navbarSupportedContent"
           >
             <ul class="navbar-nav">
+              <!--Navbar when not logged in-->
               <div class="not-logged-in d-flex">
                 <li class="nav-item">
                   <a
                     class="nav-link me-4"
                     id="login-link"
-                    href="Treasures/login/index.html"
+                    href="/Treasures/login/index.html"
                     >Login</a
                   >
                 </li>
                 <li class="nav-item">
-                  <a
-                    class="nav-link btn"
-                    id="register-link"
-                    href="Treasures/register/index.html"
+                  <a class="nav-link btn" href="/Treasures/register/index.html"
                     >Sign Up</a
                   >
                 </li>
               </div>
+              <!--Navbar when logged in-->
               <div class="logged-in d-none">
                 <li class="nav-item">
                   <button class="btn me-2" style="border: none" id="logout">
@@ -74,7 +74,7 @@
                 </li>
                 <li class="nav-item">
                   <button
-                    type="submit"
+                    type="click"
                     class="btn"
                     onclick="location.href='/Treasures/profile/index.html'"
                   >
@@ -88,17 +88,22 @@
       </nav>
     </header>
     <main>
+      <!--User info section-->
       <section class="userInfo">
+        <!--Loader-->
         <div class="loader"></div>
         <h1 class="m-3 p-3">Profile</h1>
       </section>
+      <!--Users listings-->
       <section class="userListings mt-3 d-flex justify-content-center row">
         <div class="d-flex justify-content-between">
           <h1>Listings</h1>
         </div>
+        <!--If there is no listing-->
         <div class="noListing"></div>
       </section>
     </main>
+    <!--Footer-->
     <footer>
       <div class="footer d-flex justify-content-around mt-3">
         <div
@@ -108,18 +113,8 @@
           <h2 class="d-flex justify-content-center">Treasures</h2>
           <a
             class="d-flex justify-content-center"
-            href="/Treasures/about/index.html"
-            >About</a
-          >
-          <a
-            class="d-flex justify-content-center"
             href="/Treasures/listings/index.html"
             >Listings</a
-          >
-          <a
-            class="d-flex justify-content-center"
-            href="/Treasures/contact/index.html"
-            >Contact Us</a
           >
         </div>
         <div class="footer-left">

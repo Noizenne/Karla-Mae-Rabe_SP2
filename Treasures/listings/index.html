@@ -24,21 +24,15 @@
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid d-flex justify-content-around">
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <form class="d-flex" role="search">
-              <input
-                class="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-            </form>
-          </div>
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+          <!-- Navbar brand -->
           <a class="navbar-brand" href="/index.html"
             ><img src="/images/TLogo.png" alt="The Treasures logo"
           /></a>
+
+          <!-- Toggle button -->
           <button
             class="navbar-toggler"
             type="button"
@@ -55,24 +49,23 @@
             id="navbarSupportedContent"
           >
             <ul class="navbar-nav">
+              <!--Navbar when not logged in-->
               <div class="not-logged-in d-flex">
                 <li class="nav-item">
                   <a
                     class="nav-link me-4"
                     id="login-link"
-                    href="Treasures/login/index.html"
+                    href="/Treasures/login/index.html"
                     >Login</a
                   >
                 </li>
                 <li class="nav-item">
-                  <a
-                    class="nav-link btn"
-                    id="register-link"
-                    href="Treasures/register/index.html"
+                  <a class="nav-link btn" href="/Treasures/register/index.html"
                     >Sign Up</a
                   >
                 </li>
               </div>
+              <!--Navbar when logged in-->
               <div class="logged-in d-none">
                 <li class="nav-item">
                   <button class="btn me-2" style="border: none" id="logout">
@@ -81,7 +74,7 @@
                 </li>
                 <li class="nav-item">
                   <button
-                    type="submit"
+                    type="click"
                     class="btn"
                     onclick="location.href='/Treasures/profile/index.html'"
                   >
@@ -97,14 +90,18 @@
     <main>
       <section>
         <div class="row">
+          <!--Search results-->
           <div class="searchResult col p-3 me-3"></div>
         </div>
         <h1 class="m-2 p-2">All Gems</h1>
+        <!--Listings results-->
         <div class="listings d-flex justify-content-center row">
+          <!--Loader-->
           <div class="loader"></div>
         </div>
       </section>
     </main>
+    <!--Footer-->
     <footer>
       <div class="footer d-flex justify-content-around mt-3">
         <div
@@ -114,18 +111,8 @@
           <h2 class="d-flex justify-content-center">Treasures</h2>
           <a
             class="d-flex justify-content-center"
-            href="/Treasures/about/index.html"
-            >About</a
-          >
-          <a
-            class="d-flex justify-content-center"
             href="/Treasures/listings/index.html"
             >Listings</a
-          >
-          <a
-            class="d-flex justify-content-center"
-            href="/Treasures/contact/index.html"
-            >Contact Us</a
           >
         </div>
         <div class="footer-left">
